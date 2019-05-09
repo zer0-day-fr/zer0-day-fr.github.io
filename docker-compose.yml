@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mysql:
+    image: jekyll/jekyll:pages
+    container_name: zer0-day-fr-website
+    ports:
+      - 4000:4000
+    entrypoint:
+      - jekyll
+      - serve
+      - --watch
+      - --incremental
